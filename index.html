@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overnight Oats - +30 Cafés da Manhã no Pote</title>
+    <meta name="description" content="Aprenda a fazer mais de 30 cafés da manhã no pote deliciosos e práticos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .btn-pulse {
+        animation: pulse-button 2s infinite;
+      }
+      .shake-hint {
+        animation: shake-hint 5s ease-in-out infinite;
+      }
+      @keyframes pulse-button {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 125, 50, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(47, 125, 50, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 125, 50, 0); }
+      }
+      @keyframes shake-hint {
+        0%, 100% { transform: translateX(0); }
+        10%, 30% { transform: translateX(-3px); }
+        20%, 40% { transform: translateX(3px); }
+        50% { transform: translateX(0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#F6F3ED] text-[#4A4A4A] antialiased">
+    <div id="root"></div>
+  </body>
+</html>
