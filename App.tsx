@@ -11,14 +11,26 @@ import {
 
 // --- Utility Components ---
 
-const Button = ({ children, onClick, className = "" }: React.PropsWithChildren<{ onClick?: () => void, className?: string }>) => (
-  <button 
-    onClick={onClick}
-    className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center ${className}`}
-  >
-    {children}
-  </button>
-);
+const Button = ({ children, onClick, className = "", href }: React.PropsWithChildren<{ onClick?: () => void, className?: string, href?: string }>) => {
+  if (href) {
+    return (
+      <a 
+        href={href}
+        className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center no-underline ${className}`}
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <button 
+      onClick={onClick}
+      className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center ${className}`}
+    >
+      {children}
+    </button>
+  );
+};
 
 const Section = ({ children, className = "", id = "" }: React.PropsWithChildren<{ className?: string, id?: string }>) => (
   <section id={id} className={`py-12 px-6 max-w-2xl mx-auto ${className}`}>
@@ -30,6 +42,8 @@ const Section = ({ children, className = "", id = "" }: React.PropsWithChildren<
 const Highlight = ({ children }: React.PropsWithChildren<{}>) => (
   <span className="text-[#B45309]">{children}</span>
 );
+
+const CHECKOUT_URL = "https://indec-digital.mycartpanda.com/checkout/207472355:1";
 
 // --- Page Sections ---
 
@@ -366,7 +380,7 @@ const OfferBlock = () => {
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
-          <Button className="py-5 btn-pulse shadow-[#2F7D32]/40">
+          <Button href={CHECKOUT_URL} className="py-5 btn-pulse shadow-[#2F7D32]/40">
             QUERO COMPRAR AGORA
           </Button>
         </div>
@@ -464,7 +478,7 @@ const Testimonials = () => {
       </div>
 
       <div className="mt-12">
-        <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
+        <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
           QUERO COMPRAR AGORA
         </Button>
       </div>
