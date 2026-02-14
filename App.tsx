@@ -82,8 +82,8 @@ const Hero = () => {
       <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
         Aprenda a Fazer <Highlight>+30 Cafés da Manhã no Pote</Highlight> que <Highlight>Saciam</Highlight> de Verdade, e São Baixos em <Highlight>Calorias</Highlight>… Prepare Tudo em Apenas <Highlight>30 Minutos</Highlight> e Tenha Café da Manhã Pronto por <Highlight>7 Dias</Highlight>
       </h1>
-      <p className="text-base md:text-lg text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
-        Gostoso, barato, rápido e sem fogo… Chega de preparar seu café da manhã todo dia, tenha sempre pronto na geladeira.
+      <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
+        Esses são os Overnight Oats, gostosos, baratos, rápidos e sem fogo… Tenha café da manhã que parece sobremesa sempre pronto na geladeira.
       </p>
       <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
         <img 
