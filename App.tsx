@@ -15,7 +15,7 @@ import {
 const Button = ({ children, onClick, className = "" }: React.PropsWithChildren<{ onClick?: () => void, className?: string }>) => (
   <button 
     onClick={onClick}
-    className={`w-full py-4 px-6 rounded-xl font-bold text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 ${className}`}
+    className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center ${className}`}
   >
     {children}
   </button>
@@ -355,7 +355,7 @@ const OfferBlock = () => {
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
-          <Button className="py-5 text-base sm:text-lg btn-pulse shadow-[#2F7D32]/40 whitespace-nowrap px-4">
+          <Button className="py-5 btn-pulse shadow-[#2F7D32]/40">
             QUERO COMPRAR AGORA
           </Button>
         </div>
