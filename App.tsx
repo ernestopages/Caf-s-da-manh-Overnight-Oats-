@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   ChevronRight, 
@@ -148,8 +147,8 @@ const RecipeCard = ({ title, desc, img }: { title: string, desc: string, img: st
 
 const Recipes = () => (
   <Section className="bg-[#F6F3ED]">
-    <h2 className="text-2xl font-bold text-center mb-10 text-[#2F7D32]">
-      Alguns Café da Manhã no Pote que Você Irá <Highlight>Aprender</Highlight>:
+    <h2 className="text-2xl font-bold text-center mb-10 text-[#2F7D32] uppercase">
+      Alguns <Highlight>Cafés da Manhã no Pote</Highlight> que Você Irá Aprender:
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
       <RecipeCard 
@@ -195,7 +194,7 @@ const Recipes = () => (
 const Benefits = () => (
   <Section className="bg-[#FFFFFF]">
     <h2 className="text-2xl font-bold text-center mb-8 uppercase tracking-wide text-[#2F7D32]">
-      <Highlight>DURA VÁRIOS DIAS</Highlight> NA GELADEIRA SEM PERDER A QUALIDADE E SABOR!
+      DURA ATÉ <Highlight>07 DIAS</Highlight> NA <Highlight>GELADEIRA</Highlight> SEM PERDER A QUALIDADE E SABOR!
     </h2>
     <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
       <img 
@@ -204,7 +203,7 @@ const Benefits = () => (
         className="w-full h-auto"
       />
     </div>
-    <div className="space-y-2 mb-6 max-w-sm mx-auto pl-4">
+    <div className="space-y-2 mb-6 max-sm mx-auto pl-4">
       {[
         "Sacia por muito tempo",
         "Pronto em poucos minutos",
@@ -342,10 +341,22 @@ const OfferBlock = () => {
         </div>
         
         <div className="space-y-4 mb-10 w-full max-w-sm mx-auto">
-          <div className="flex gap-3 items-center"><CheckCircle2 className="text-[#2F7D32]" size={22} /> <span className="font-bold text-[#4A4A4A] text-base md:text-lg">+30 Receitas de Cafés da Manhã no Pote</span></div>
-          <div className="flex gap-3 items-center"><CheckCircle2 className="text-[#2F7D32]" size={22} /> <span className="font-bold text-[#4A4A4A] text-base md:text-lg">Lista de Compras Econômica</span></div>
-          <div className="flex gap-3 items-center"><CheckCircle2 className="text-[#2F7D32]" size={22} /> <span className="font-bold text-[#4A4A4A] text-base md:text-lg">Sobremesas Fit no Pote</span></div>
-          <div className="flex gap-3 items-center"><CheckCircle2 className="text-[#2F7D32]" size={22} /> <span className="font-bold text-[#4A4A4A] text-base md:text-lg">30 Marmitas Fit P/Congelar</span></div>
+          <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-[#2F7D32] shrink-0" size={22} /> 
+            <span className="font-bold text-[#2F7D32] text-base md:text-lg leading-tight">+30 Receitas de Cafés da Manhã no Pote</span>
+          </div>
+          <div className="flex gap-3 items-center">
+            <CheckCircle2 className="text-[#2F7D32] shrink-0" size={22} /> 
+            <span className="font-bold text-[#2F7D32] text-base md:text-lg">Lista de Compras Econômica</span>
+          </div>
+          <div className="flex gap-3 items-center">
+            <CheckCircle2 className="text-[#2F7D32] shrink-0" size={22} /> 
+            <span className="font-bold text-[#2F7D32] text-base md:text-lg">Sobremesas Fit no Pote</span>
+          </div>
+          <div className="flex gap-3 items-center">
+            <CheckCircle2 className="text-[#2F7D32] shrink-0" size={22} /> 
+            <span className="font-bold text-[#2F7D32] text-base md:text-lg">30 Marmitas Fit P/Congelar</span>
+          </div>
         </div>
 
         <div className="text-center mb-10">
@@ -377,18 +388,18 @@ const OfferBlock = () => {
 
 const Expert = () => (
   <Section className="bg-[#F6F3ED]">
-    <h2 className="text-2xl font-bold text-center mb-8 text-[#2F7D32]">
-      <Highlight>Quem sou eu</Highlight>?
-    </h2>
     <div className="text-center mb-8">
-      <div className="max-w-[320px] mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+      <div className="max-w-[320px] mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-6">
         <img 
           src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/EXPERT_ojfvf9.webp" 
           alt="Laura Freitas" 
           className="w-full h-auto object-cover" 
         />
       </div>
-      <h3 className="text-xl font-bold mt-6 text-[#1B3022]">Overnight Oats da Laura</h3>
+      <h2 className="text-2xl font-bold text-[#2F7D32] mb-1">
+        QUEM SOU EU?
+      </h2>
+      <h3 className="text-xl font-bold text-[#1B3022]">Overnight Oats da Laura</h3>
     </div>
     <div className="space-y-4 text-[#4A4A4A] leading-relaxed text-sm sm:text-base font-normal">
       <p>Meu nome é Laura Freitas e, por muito tempo, café da manhã era um problema pra mim. Eu acordava sem tempo, comia qualquer coisa e sentia fome rápido ou simplesmente pulava essa refeição… E isso bagunçava todo o resto do meu dia. Eu tentava me organizar, tentava ‘comer melhor’, mas sempre desistia depois de alguns dias.</p>
@@ -412,7 +423,7 @@ const Testimonials = () => {
   const scroll = (dir: 'left' | 'right') => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollAmount = clientWidth * 0.9;
+      const scrollAmount = clientWidth * 0.95;
       scrollRef.current.scrollTo({
         left: dir === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
         behavior: 'smooth'
@@ -429,30 +440,30 @@ const Testimonials = () => {
       <div className="relative">
         <div 
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 hide-scrollbar pb-6 px-4"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 hide-scrollbar pb-8 px-2"
         >
           {images.map((img, idx) => (
-            <div key={idx} className="shrink-0 w-[94%] snap-center rounded-2xl overflow-hidden shadow-2xl border border-[#6BCB77]/10 shake-hint">
-              <img src={img} alt={`Depoimento ${idx+1}`} className="w-full h-auto object-contain max-h-[650px]" />
+            <div key={idx} className="shrink-0 w-[96%] snap-center rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border border-[#6BCB77]/15 shake-hint">
+              <img src={img} alt={`Depoimento ${idx+1}`} className="w-full h-auto object-contain max-h-[850px]" />
             </div>
           ))}
         </div>
         
         <button 
           onClick={() => scroll('left')} 
-          className="absolute left-2 top-1/2 -translate-y-1/2 p-4 bg-white/95 rounded-full shadow-2xl text-[#2F7D32] active:scale-90 transition-transform z-10 border border-[#2F7D32]/20"
+          className="absolute left-1 top-1/2 -translate-y-1/2 p-4 bg-white/95 rounded-full shadow-2xl text-[#2F7D32] active:scale-90 transition-transform z-10 border border-[#2F7D32]/10"
         >
-          <ChevronLeft size={28} />
+          <ChevronLeft size={32} />
         </button>
         <button 
           onClick={() => scroll('right')} 
-          className="absolute right-2 top-1/2 -translate-y-1/2 p-4 bg-white/95 rounded-full shadow-2xl text-[#2F7D32] active:scale-90 transition-transform z-10 border border-[#2F7D32]/20"
+          className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-white/95 rounded-full shadow-2xl text-[#2F7D32] active:scale-90 transition-transform z-10 border border-[#2F7D32]/10"
         >
-          <ChevronRight size={28} />
+          <ChevronRight size={32} />
         </button>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-12">
         <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
           QUERO COMPRAR AGORA
         </Button>
