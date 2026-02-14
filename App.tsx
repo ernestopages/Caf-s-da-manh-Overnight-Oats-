@@ -72,7 +72,7 @@ const Hero = () => {
       <p className="text-base md:text-lg text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
         Gostoso, barato, rápido e sem fogo… Chega de preparar seu café da manhã todo dia, tenha sempre pronto na geladeira.
       </p>
-      <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center">
+      <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
         <img 
           src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/CAPA_h9gr2r.webp" 
           alt="Capa do E-book Overnight Oats" 
@@ -164,7 +164,7 @@ const Recipes = () => (
       />
       <RecipeCard 
         title="🍎 Maçã & Canela Termogênico"
-        desc="(Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por horas.)"
+        desc="(Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por hours.)"
         img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/MA%C3%87%C3%83-COM-CANELA_nzgvy7.png"
       />
       <RecipeCard 
