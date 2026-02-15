@@ -12,11 +12,13 @@ import {
 // --- Utility Components ---
 
 const Button = ({ children, onClick, className = "", href }: React.PropsWithChildren<{ onClick?: () => void, className?: string, href?: string }>) => {
+  const baseClasses = `w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center btn-pulse ${className}`;
+  
   if (href) {
     return (
       <a 
         href={href}
-        className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center no-underline ${className}`}
+        className={`no-underline ${baseClasses}`}
       >
         {children}
       </a>
@@ -25,7 +27,7 @@ const Button = ({ children, onClick, className = "", href }: React.PropsWithChil
   return (
     <button 
       onClick={onClick}
-      className={`w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center ${className}`}
+      className={baseClasses}
     >
       {children}
     </button>
@@ -80,7 +82,7 @@ const Hero = () => {
   return (
     <Section className="text-center pt-8 bg-[#F6F3ED]">
       <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
-        Aprenda a Fazer <Highlight>+30 Cafés da Manhã no Pote</Highlight> que <Highlight>Saciam</Highlight> de Verdade, e São Baixos em <Highlight>Calorias</Highlight>… Prepare Tudo em Apenas <Highlight>30 Minutos</Highlight> e Tenha Café da Manhã Pronto por <Highlight>7 Dias</Highlight>
+        Aprenda a Fazer <Highlight>+30 Cafés da Manhã no Pote</Highlight> que <Highlight>Saciam</Highlight> de Verdade, São Deliciosos e Baixos em <Highlight>Calorias</Highlight>… Prepare Tudo em Apenas <Highlight>30 Minutos</Highlight> e Tenha Café da Manhã Pronto por <Highlight>7 Dias</Highlight>
       </h1>
       <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
         Esses são os Overnight Oats, gostosos, baratos, rápidos e sem fogo… Tenha café da manhã que parece sobremesa sempre pronto na geladeira.
@@ -380,7 +382,7 @@ const OfferBlock = () => {
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
-          <Button href={CHECKOUT_URL} className="py-5 btn-pulse shadow-[#2F7D32]/40">
+          <Button href={CHECKOUT_URL} className="py-5 shadow-[#2F7D32]/40">
             QUERO COMPRAR AGORA
           </Button>
         </div>
