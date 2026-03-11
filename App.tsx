@@ -89,7 +89,7 @@ const Hero = () => {
       </p>
       <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
         <img 
-          src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/CAPA_h9gr2r.webp" 
+          src="https://i.ibb.co/SDmQ5nnp/CAPA.webp" 
           alt="Capa do E-book Overnight Oats" 
           className="w-full h-auto object-cover"
           loading="eager"
@@ -139,7 +139,7 @@ const WhatYouFind = () => {
       </div>
       <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
         <img 
-          src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/MONTAGEM_ncqgb5.webp" 
+          src="https://i.ibb.co/Fq7jvTmy/MONTAGEM.webp" 
           alt="Montagem dos potes" 
           className="w-full h-auto"
         />
@@ -170,32 +170,32 @@ const Recipes = () => (
       <RecipeCard 
         title="⚡ Energético Natural"
         desc="(Perfeito pra começar o dia com disposição, saciedade e sem aquela fome que aparece antes do almoço.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/Energ%C3%A9tico_z73o8o.webp"
+        img="https://i.ibb.co/4ZPZScBJ/Energ-tico.webp"
       />
       <RecipeCard 
         title="🥭 Tropical Cremoso"
         desc="(Leve, refrescante e naturalmente doce, parece sobremesa, mas ajuda você a manter o foco na sua rotina saudável.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008939/Tropical_ul50ac.webp"
+        img="https://i.ibb.co/G4DH980p/Tropical.webp"
       />
       <RecipeCard 
         title="🍎 Maçã & Canela Termogênico"
         desc="(Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por hours.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/MA%C3%87%C3%83-COM-CANELA_nzgvy7.png"
+        img="https://i.ibb.co/Y43W1KNw/MA-COM-CANELA.png"
       />
       <RecipeCard 
         title="🍎 Morango Proteico"
         desc="(Delicado, leve e ideal pra quem quer algo gostoso que ajuda na saciedade e no emagrecimento.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/Morango-Proteico_d2yaef.png"
+        img="https://i.ibb.co/DHdwzSZY/Morango-Proteico.png"
       />
       <RecipeCard 
         title="☕ Café & Cacau Despertar"
         desc="(Combinação perfeita pra acordar de verdade e manter energia estável durante o dia.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008939/Caf%C3%A9_xf4jpn.webp"
+        img="https://i.ibb.co/zWDQb9Jk/Caf.webp"
       />
       <RecipeCard 
         title="🍌 Banana com Linhaça Cremosa"
         desc="(Simples, nutritiva e perfeita pra quem quer praticidade sem abrir mão do resultado.)"
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008939/Banana_ivlbmf.webp"
+        img="https://i.ibb.co/yFm0NqF8/Banana.webp"
       />
     </div>
     <p className="text-center text-sm md:text-base mb-8 font-bold italic text-[#4A4A4A] px-4">
@@ -214,7 +214,7 @@ const Benefits = () => (
     </h2>
     <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
       <img 
-        src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008939/DIAS-2_xtvztm.webp" 
+        src="https://i.ibb.co/Tqd8stFF/DIAS-2.webp" 
         alt="Dias na geladeira" 
         className="w-full h-auto"
       />
@@ -261,19 +261,19 @@ const Bonus = () => (
     </h2>
     <div className="space-y-10 mb-12">
       <BonusCard 
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771010997/B%C3%B4nus_1_cntsz7.webp"
+        img="https://i.ibb.co/B2YPt2J1/B-nus-1.webp"
         bonusNum="Bônus 01"
         title='"Lista de Compras Econômica + Substituições baratas"'
         price="R$ 29,90"
       />
       <BonusCard 
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771010997/B%C3%B4nus_2_kvuicw.webp"
+        img="https://i.ibb.co/5g2gC5bM/B-nus-2.webp"
         bonusNum="Bônus 02"
         title='"Sobremesas Fit no Pote (zero açúcar)"'
         price="R$ 29,90"
       />
       <BonusCard 
-        img="https://res.cloudinary.com/drcqck3r9/image/upload/v1771010997/B%C3%B4nus_3_pinvvr.webp"
+        img="https://i.ibb.co/JR1KkKFN/B-nus-3.webp"
         bonusNum="Bônus 03"
         title='"30 Marmitas Fit p/congelar"'
         price="R$ 29,90"
@@ -353,7 +353,7 @@ const OfferBlock = () => {
     <Section id="oferta" className="scroll-mt-10 bg-[#FFFFFF]">
       <div className="bg-[#FDFBF7] rounded-[40px] p-8 md:p-12 shadow-[0_20px_60px_rgba(47,125,50,0.12)] border border-[#2F7D32]/10 relative overflow-hidden flex flex-col items-center">
         <div className="mb-12 scale-125 md:scale-150 transform transition-transform duration-700 hover:scale-[1.55]">
-          <img src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771010068/7_te3pbr.webp" alt="Mockup do Guia" className="w-full h-auto drop-shadow-2xl" />
+          <img src="https://i.ibb.co/27HPPVZB/7.webp" alt="Mockup do Guia" className="w-full h-auto drop-shadow-2xl" />
         </div>
         
         <div className="space-y-4 mb-10 w-full max-w-sm mx-auto">
@@ -407,7 +407,7 @@ const Expert = () => (
     <div className="text-center mb-8">
       <div className="max-w-[320px] mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-6">
         <img 
-          src="https://res.cloudinary.com/drcqck3r9/image/upload/v1771008940/EXPERT_ojfvf9.webp" 
+          src="https://i.ibb.co/Df8Nw2qJ/EXPERT.webp" 
           alt="Laura Freitas" 
           className="w-full h-auto object-cover" 
         />
@@ -429,11 +429,11 @@ const Expert = () => (
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const images = [
-    "https://res.cloudinary.com/drcqck3r9/image/upload/v1771010060/1_un8rsc.webp",
-    "https://res.cloudinary.com/drcqck3r9/image/upload/v1771010060/2_ofxnca.webp",
-    "https://res.cloudinary.com/drcqck3r9/image/upload/v1771010061/3_vslz6a.webp",
-    "https://res.cloudinary.com/drcqck3r9/image/upload/v1771010061/4_ubiwkx.webp",
-    "https://res.cloudinary.com/drcqck3r9/image/upload/v1771010061/5_ki6sxc.webp"
+    "https://i.ibb.co/gbX0sd3v/Dep-1.webp",
+    "https://i.ibb.co/TM1rnzZp/Dep-2.webp",
+    "https://i.ibb.co/1GXZnFrd/Dep-3.webp",
+    "https://i.ibb.co/HpH6VyPV/Dep-4.webp",
+    "https://i.ibb.co/TDBMnxBh/Dep-5.webp"
   ];
 
   const scroll = (dir: 'left' | 'right') => {
