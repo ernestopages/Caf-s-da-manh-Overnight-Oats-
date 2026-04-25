@@ -373,7 +373,7 @@ const OfferBlock = () => {
         <div className="text-center mb-10">
           <p className="text-[#7A7A7A] line-through text-xl mb-1">De R$99,90</p>
           <p className="text-sm font-bold text-[#B45309] uppercase tracking-widest mb-2">POR APENAS</p>
-          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$19,90</p>
+          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$10,00</p>
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
