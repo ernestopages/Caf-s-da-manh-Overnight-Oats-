@@ -95,14 +95,6 @@ const Hero = () => {
           loading="eager"
         />
       </div>
-      <div className="bg-white p-4 max-w-sm mx-auto rounded-2xl shadow-md border border-[#F0EAD6] mb-8">
-        <p className="text-[#7A7A7A] line-through text-xs mb-1">De R$99,90</p>
-        <p className="text-[10px] font-bold text-[#2F7D32] uppercase tracking-tighter">por apenas</p>
-        <p className="text-4xl font-bold text-[#34A853] my-1">R$10,00</p>
-        <p className="text-[11px] text-[#4A4A4A] italic leading-tight">
-          Apenas um valor simbólico para separar quem realmente quer aprender a fazer cafés da manhã no pote dos curiosos.
-        </p>
-      </div>
       <Button onClick={scrollToOffer} className="shadow-[#2F7D32]/30">
         QUERO FAZER CAFÉS GOSTOSOS
       </Button>
