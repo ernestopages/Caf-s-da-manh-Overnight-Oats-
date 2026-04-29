@@ -78,6 +78,10 @@ const TopBanner = () => {
 };
 
 const Hero = () => {
+  const scrollToOffer = () => {
+    document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Section className="text-center pt-8 bg-[#F6F3ED]">
       <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
@@ -94,6 +98,17 @@ const Hero = () => {
           loading="eager"
         />
       </div>
+      <div className="bg-white p-4 rounded-2xl shadow-md border border-[#F0EAD6] mb-8 max-w-[280px] mx-auto">
+        <p className="text-[#7A7A7A] line-through text-xs mb-0.5">De R$99,90</p>
+        <p className="text-[10px] font-bold text-[#2F7D32] uppercase tracking-wider">por apenas</p>
+        <p className="text-4xl font-bold text-[#2F7D32] my-1">R$10,00</p>
+        <p className="text-[11px] text-[#4A4A4A] italic leading-tight">
+          Apenas um valor simbólico para separar quem realmente quer aprender a fazer cafés da manhã no pote dos curiosos.
+        </p>
+      </div>
+      <Button onClick={scrollToOffer} className="shadow-[#2F7D32]/30">
+        QUERO FAZER CAFÉS GOSTOSOS
+      </Button>
     </Section>
   );
 };
@@ -132,6 +147,9 @@ const WhatYouFind = () => {
           className="w-full h-auto"
         />
       </div>
+      <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
+        QUERO AS RECEITAS
+      </Button>
     </Section>
   );
 };
@@ -186,6 +204,9 @@ const Recipes = () => (
     <p className="text-center text-sm md:text-base mb-8 font-bold italic text-[#4A4A4A] px-4">
       E muito mais… receitas saborosas e práticas que transformarão sua manhã de forma saudável sem precisar levar nada ao fogo.
     </p>
+    <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
+      QUERO AS RECEITAS
+    </Button>
   </Section>
 );
 
@@ -261,6 +282,9 @@ const Bonus = () => (
         price="R$ 29,90"
       />
     </div>
+    <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
+      QUERO AGORA MESMO!
+    </Button>
   </Section>
 );
 
@@ -357,7 +381,7 @@ const OfferBlock = () => {
         <div className="text-center mb-10">
           <p className="text-[#7A7A7A] line-through text-xl mb-1">De R$99,90</p>
           <p className="text-sm font-bold text-[#B45309] uppercase tracking-widest mb-2">POR APENAS</p>
-          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$19,90</p>
+          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$10,00</p>
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
