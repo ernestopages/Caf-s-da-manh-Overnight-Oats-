@@ -59,7 +59,7 @@ const GLPSection = () => (
         A GORDURA NÃO SOME PORQUE VOCÊ COME POUCO. SOME PORQUE VOCÊ PARA DE SENTIR FOME
       </h2>
       <p className="text-sm md:text-base text-[#463F3A] leading-relaxed font-normal">
-        A aveia adormecida de um dia pro outro, a chia, e o iogurte natural, juntos na proporção certa estimulam a liberação natural do GLP-1 no intestino, o hormônio da saciedade que mantém a fome travada por horas. É por isso que quem faz esses potes para de beliscar, de comer besteira antes do almoço e começa a emagrecer sem sentir que está fazendo dieta.
+        Os ingredientes utilizados nos cafés da manhã no pote, juntos na proporção certa são pensados para estimular a liberação natural do GLP-1 no intestino, o hormônio da saciedade que mantém a fome travada por horas. É por isso que quem faz esses potes para de beliscar durante o dia, de comer besteira antes do almoço e começa a emagrecer sem sentir que está fazendo dieta.
       </p>
     </div>
   </Section>
@@ -73,10 +73,10 @@ const Hero = () => {
   return (
     <Section className="text-center pt-8 bg-[#F6F3ED]">
       <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
-        Parece sobremesa, <Highlight>sacia</Highlight> até o almoço e ainda <Highlight>emagrece</Highlight>... Conheça o <Highlight>café da manhã no pote</Highlight> que acabou com minha <Highlight>fome</Highlight> e minha <Highlight>vontade de doce</Highlight>
+        Parece sobremesa, <Highlight>sacia</Highlight> até o almoço e ainda <Highlight>emagrece</Highlight>... Conheça o <Highlight>café da manhã no pote</Highlight> que elimina a <Highlight>fome</Highlight> e a vontade de <Highlight>doce</Highlight>
       </h1>
       <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-xl mx-auto">
-        O segredo está na combinação certa de ingredientes que ativa a proteína GLP natural do corpo, a mesma responsável pela saciedade, mantendo a fome travada por horas enquanto você come saudável e com prazer!
+        Além de durar 7 dias na geladeira, eles são saborosos, saudáveis, práticos e ativam a proteína GLP natural do corpo, que é responsável pela saciedade.
       </p>
       <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
         <img 
