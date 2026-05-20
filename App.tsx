@@ -400,11 +400,16 @@ const Expert = () => (
       </h2>
       <h3 className="text-xl font-bold text-[#1B3022]">Overnight Oats da Laura</h3>
     </div>
-    <div className="space-y-4 text-[#4A4A4A] leading-relaxed text-sm sm:text-base font-normal">
+    <div className="space-y-4 text-[#4A4A4A] leading-relaxed text-sm sm:text-base font-normal mb-8">
       <p>Meu nome é Laura Freitas e, por muito tempo, café da manhã era um problema pra mim. Eu acordava sem tempo, comia qualquer coisa e sentia fome rápido ou simplesmente pulava essa refeição… E isso bagunçava todo o resto do meu dia. Eu tentava me organizar, tentava ‘comer melhor’, mas sempre desistia depois de alguns dias.</p>
       <p>Tudo começou a mudar quando descobri uma forma simples de deixar meus cafés da manhã prontos com antecedência, práticos, saudáveis, gostosos e que realmente saciam.</p>
       <p>Não foi força de vontade que resolveu. Foi organização.</p>
       <p>Quando comecei a deixar meus cafés prontos em potes, parei de pular refeições, parei de comer besteira por falta de tempo e finalmente consegui manter constância sem sofrimento. E o melhor: são tão gostosos que parecem sobremesa, mas trabalham a favor do meu corpo e dos meus objetivos.</p>
+    </div>
+    <div className="mt-8">
+      <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
+        QUERO COMPRAR AGORA
+      </Button>
     </div>
   </Section>
 );
@@ -460,12 +465,6 @@ const Testimonials = () => {
         >
           <ChevronRight size={32} />
         </button>
-      </div>
-
-      <div className="mt-12">
-        <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
-          QUERO COMPRAR AGORA
-        </Button>
       </div>
     </Section>
   );
