@@ -52,18 +52,30 @@ const CHECKOUT_URL = "https://indec-digital.mycartpanda.com/checkout/207472355:1
 
 // --- Page Sections ---
 
-const GLPSection = () => (
-  <Section className="bg-white border-y border-[#F0EAD6]/60 text-center">
-    <div className="bg-[#FEFBF0] p-6 md:p-8 rounded-3xl border border-[#B45309]/15 shadow-sm">
-      <h2 className="text-xl md:text-2xl font-bold mb-4 text-[#B45309] uppercase leading-tight tracking-wide">
-        A GORDURA NÃO SOME PORQUE VOCÊ COME POUCO. SOME PORQUE VOCÊ PARA DE SENTIR FOME
-      </h2>
-      <p className="text-sm md:text-base text-[#463F3A] leading-relaxed font-normal">
-        Os ingredientes utilizados nos cafés da manhã no pote, juntos na proporção certa são pensados para estimular a liberação natural do GLP-1 no intestino, o hormônio da saciedade que mantém a fome travada por horas. É por isso que quem faz esses potes para de beliscar durante o dia, de comer besteira antes do almoço e começa a emagrecer sem sentir que está fazendo dieta.
-      </p>
+const TopBanner = () => {
+  const [dates, setDates] = useState('');
+
+  useEffect(() => {
+    const today = new Date();
+    const d0 = today.getDate().toString().padStart(2, '0');
+    
+    const y1 = new Date(today);
+    y1.setDate(today.getDate() - 1);
+    const d1 = y1.getDate().toString().padStart(2, '0');
+    
+    const y2 = new Date(today);
+    y2.setDate(today.getDate() - 2);
+    const d2 = y2.getDate().toString().padStart(2, '0');
+
+    setDates(`${d2}, ${d1} e ${d0}`);
+  }, []);
+
+  return (
+    <div className="bg-[#E53935] text-white py-3 px-4 text-center font-bold text-sm tracking-wide">
+      OFERTA VÁLIDA APENAS NOS DIAS {dates}
     </div>
-  </Section>
-);
+  );
+};
 
 const Hero = () => {
   const scrollToOffer = () => {
@@ -73,10 +85,10 @@ const Hero = () => {
   return (
     <Section className="text-center pt-8 bg-[#F6F3ED]">
       <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
-        Parece sobremesa, <Highlight>sacia</Highlight> até o almoço e ainda <Highlight>emagrece</Highlight>... Conheça o <Highlight>café da manhã no pote</Highlight> que elimina a <Highlight>fome</Highlight> e a vontade de <Highlight>doce</Highlight>
+        Aprenda a Fazer <Highlight>+30 Cafés da Manhã no Pote</Highlight> que <Highlight>Saciam</Highlight> de Verdade, São Deliciosos e Baixos em <Highlight>Calorias</Highlight>… Prepare Tudo em Apenas <Highlight>30 Minutos</Highlight> e Tenha Café da Manhã Pronto por <Highlight>7 Dias</Highlight>
       </h1>
-      <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-xl mx-auto">
-        Além de durar 7 dias na geladeira, eles são saborosos, saudáveis, práticos e ativam a proteína GLP natural do corpo, que é responsável pela saciedade.
+      <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
+        Esses são os Overnight Oats, gostosos, baratos, rápidos e sem fogo… Tenha café da manhã que parece sobremesa sempre pronto na geladeira.
       </p>
       <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
         <img 
@@ -86,8 +98,16 @@ const Hero = () => {
           loading="eager"
         />
       </div>
+      <div className="bg-white p-4 rounded-2xl shadow-md border border-[#F0EAD6] mb-8 max-w-[280px] mx-auto">
+        <p className="text-[#7A7A7A] line-through text-xs mb-0.5">De R$99,90</p>
+        <p className="text-[10px] font-bold text-[#2F7D32] uppercase tracking-wider">por apenas</p>
+        <p className="text-4xl font-bold text-[#2F7D32] my-1">R$10,00</p>
+        <p className="text-[11px] text-[#4A4A4A] italic leading-tight">
+          Apenas um valor simbólico para separar quem realmente quer aprender a fazer cafés da manhã no pote dos curiosos.
+        </p>
+      </div>
       <Button onClick={scrollToOffer} className="shadow-[#2F7D32]/30">
-        QUERO FAZER CAFÉS DA MANHÃ NO POTE
+        QUERO FAZER CAFÉS GOSTOSOS
       </Button>
     </Section>
   );
@@ -152,32 +172,32 @@ const Recipes = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
       <RecipeCard 
         title="⚡ Energético Natural"
-        desc="Perfeito pra começar o dia com disposição, saciedade e sem aquela fome que aparece antes do almoço."
+        desc="(Perfeito pra começar o dia com disposição, saciedade e sem aquela fome que aparece antes do almoço.)"
         img="https://i.ibb.co/4ZPZScBJ/Energ-tico.webp"
       />
       <RecipeCard 
         title="🥭 Tropical Cremoso"
-        desc="Leve, refrescante e naturalmente doce, parece sobremesa, mas ajuda você a manter o foco na sua rotina saudável."
+        desc="(Leve, refrescante e naturalmente doce, parece sobremesa, mas ajuda você a manter o foco na sua rotina saudável.)"
         img="https://i.ibb.co/G4DH980p/Tropical.webp"
       />
       <RecipeCard 
         title="🍎 Maçã & Canela Termogênico"
-        desc="Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por horas."
+        desc="(Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por hours.)"
         img="https://i.ibb.co/Y43W1KNw/MA-COM-CANELA.png"
       />
       <RecipeCard 
         title="🍎 Morango Proteico"
-        desc="Delicado, leve e ideal pra quem quer algo gostoso que ajuda na saciedade e no emagrecimento."
+        desc="(Delicado, leve e ideal pra quem quer algo gostoso que ajuda na saciedade e no emagrecimento.)"
         img="https://i.ibb.co/DHdwzSZY/Morango-Proteico.png"
       />
       <RecipeCard 
         title="☕ Café & Cacau Despertar"
-        desc="Combinação perfeita pra acordar de verdade e manter energia estável durante o dia."
+        desc="(Combinação perfeita pra acordar de verdade e manter energia estável durante o dia.)"
         img="https://i.ibb.co/zWDQb9Jk/Caf.webp"
       />
       <RecipeCard 
         title="🍌 Banana com Linhaça Cremosa"
-        desc="Simples, nutritiva e perfeita pra quem quer praticidade sem abrir mão do resultado."
+        desc="(Simples, nutritiva e perfeita pra quem quer praticidade sem abrir mão do resultado.)"
         img="https://i.ibb.co/yFm0NqF8/Banana.webp"
       />
     </div>
@@ -400,16 +420,11 @@ const Expert = () => (
       </h2>
       <h3 className="text-xl font-bold text-[#1B3022]">Overnight Oats da Laura</h3>
     </div>
-    <div className="space-y-4 text-[#4A4A4A] leading-relaxed text-sm sm:text-base font-normal mb-8">
+    <div className="space-y-4 text-[#4A4A4A] leading-relaxed text-sm sm:text-base font-normal">
       <p>Meu nome é Laura Freitas e, por muito tempo, café da manhã era um problema pra mim. Eu acordava sem tempo, comia qualquer coisa e sentia fome rápido ou simplesmente pulava essa refeição… E isso bagunçava todo o resto do meu dia. Eu tentava me organizar, tentava ‘comer melhor’, mas sempre desistia depois de alguns dias.</p>
       <p>Tudo começou a mudar quando descobri uma forma simples de deixar meus cafés da manhã prontos com antecedência, práticos, saudáveis, gostosos e que realmente saciam.</p>
       <p>Não foi força de vontade que resolveu. Foi organização.</p>
       <p>Quando comecei a deixar meus cafés prontos em potes, parei de pular refeições, parei de comer besteira por falta de tempo e finalmente consegui manter constância sem sofrimento. E o melhor: são tão gostosos que parecem sobremesa, mas trabalham a favor do meu corpo e dos meus objetivos.</p>
-    </div>
-    <div className="mt-8">
-      <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
-        QUERO COMPRAR AGORA
-      </Button>
     </div>
   </Section>
 );
@@ -465,6 +480,12 @@ const Testimonials = () => {
         >
           <ChevronRight size={32} />
         </button>
+      </div>
+
+      <div className="mt-12">
+        <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
+          QUERO COMPRAR AGORA
+        </Button>
       </div>
     </Section>
   );
@@ -548,16 +569,16 @@ const Footer = () => (
 export default function App() {
   return (
     <div className="min-h-screen bg-[#F6F3ED]">
+      <TopBanner />
       <Hero />
-      <GLPSection />
       <WhatYouFind />
       <Recipes />
       <Benefits />
       <Bonus />
-      <Testimonials />
       <PainPoints />
       <OfferBlock />
       <Expert />
+      <Testimonials />
       <FAQ />
       <Footer />
     </div>
