@@ -48,8 +48,6 @@ const Highlight = ({ children }: React.PropsWithChildren<{}>) => (
   <span className="text-[#B45309]">{children}</span>
 );
 
-const CHECKOUT_URL = "https://indec-digital.mycartpanda.com/checkout/207472355:1";
-
 // --- Page Sections ---
 
 const TopBanner = () => {
@@ -385,7 +383,7 @@ const OfferBlock = () => {
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
-          <Button href={CHECKOUT_URL} className="py-5 shadow-[#2F7D32]/40">
+          <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="py-5 shadow-[#2F7D32]/40">
             QUERO COMPRAR AGORA
           </Button>
         </div>
@@ -483,7 +481,7 @@ const Testimonials = () => {
       </div>
 
       <div className="mt-12">
-        <Button href={CHECKOUT_URL} className="shadow-[#2F7D32]/30">
+        <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
           QUERO COMPRAR AGORA
         </Button>
       </div>
