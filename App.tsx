@@ -88,7 +88,7 @@ const Hero = () => {
       </p>
       <div className="max-w-md mx-auto">
         <img 
-          src="https://i.ibb.co/Pz5QLnvR/CAPA-ATT-png.png" 
+          src="https://i.ibb.co/wN90tkw0/CAPA-web.webp" 
           alt="Capa do E-book Overnight Oats" 
           className="w-full h-auto object-contain mx-auto"
           loading="eager"
@@ -434,6 +434,26 @@ const Expert = () => (
   </Section>
 );
 
+const Guarantee = () => (
+  <Section className="bg-[#F6F3ED] pt-2 pb-10">
+    <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-[#F0EAD6] max-w-lg mx-auto text-center">
+      <div className="w-40 sm:w-48 mx-auto mb-6">
+        <img 
+          src="https://i.ibb.co/pv6zQcGj/Garantia.webp" 
+          alt="Garantia Incondicional de 7 Dias" 
+          className="w-full h-auto object-contain mx-auto"
+        />
+      </div>
+      <h2 className="text-2xl sm:text-3xl font-bold text-[#2F7D32] mb-4">
+        Experimente já por <span className="text-[#B45309]">7 dias!</span>
+      </h2>
+      <p className="text-sm sm:text-base text-[#4A4A4A] leading-relaxed font-normal">
+        Se por qualquer motivo, você não gostar do conteúdo ou achar que não serve para você. É só solicitar o reembolso com o suporte que devolvemos todo o seu dinheiro sem burocracias!
+      </p>
+    </div>
+  </Section>
+);
+
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const images = [
@@ -584,6 +604,7 @@ export default function App() {
       <PainPoints />
       <OfferBlock />
       <Expert />
+      <Guarantee />
       <FAQ />
       <Footer />
     </div>
