@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes pulse-button {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 125, 50, 0.4); }
+  70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(47, 125, 50, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 125, 50, 0); }
+}
+
+@keyframes shake-hint {
+  0%, 100% { transform: translateX(0); }
+  10%, 30% { transform: translateX(-3px); }
+  20%, 40% { transform: translateX(3px); }
+  50% { transform: translateX(0); }
+}
+
+.btn-pulse {
+  animation: pulse-button 2.5s infinite;
+}
+
+.shake-hint {
+  animation: shake-hint 5s ease-in-out infinite;
+}

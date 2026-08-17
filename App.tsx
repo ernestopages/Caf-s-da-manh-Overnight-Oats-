@@ -91,7 +91,12 @@ const Hero = () => {
           src="https://i.ibb.co/wN90tkw0/CAPA-web.webp" 
           alt="Capa do E-book Overnight Oats" 
           className="w-full h-auto object-contain mx-auto"
+          width={448}
+          height={448}
           loading="eager"
+          decoding="async"
+          // @ts-ignore
+          fetchPriority="high"
         />
       </div>
     </Section>
@@ -131,6 +136,10 @@ const WhatYouFind = () => {
             src="https://i.ibb.co/fzg6zGpv/Gemini-Generated-Image-3ib6u03ib6u03ib6.webp" 
             alt="Montagem dos potes" 
             className="w-full h-auto object-cover"
+            width={600}
+            height={380}
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -140,7 +149,15 @@ const WhatYouFind = () => {
 
 const RecipeCard = ({ title, desc, img }: { title: string, desc: string, img: string }) => (
   <div className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full border border-[#6BCB77]/10">
-    <img src={img} alt={title} className="w-full h-56 object-cover" />
+    <img 
+      src={img} 
+      alt={title} 
+      className="w-full h-56 object-cover" 
+      width={300} 
+      height={224} 
+      loading="lazy" 
+      decoding="async" 
+    />
     <div className="p-5 flex-grow">
       <h3 className="font-bold text-lg mb-2 text-[#2F7D32]">{title}</h3>
       <p className="text-[#4A4A4A] text-sm leading-relaxed">{desc}</p>
@@ -202,6 +219,10 @@ const Benefits = () => (
           src="https://i.ibb.co/Tqd8stFF/DIAS-2.webp" 
           alt="Dias na geladeira" 
           className="w-full h-auto"
+          width={600}
+          height={380}
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="space-y-2.5 max-w-sm mx-auto pl-2">
@@ -232,6 +253,10 @@ const ExtraLesson = () => (
           src="https://i.ibb.co/Q32xyg60/AULA-WEBP.webp" 
           alt="Aula Introdutória de Brinde" 
           className="w-full h-auto object-cover"
+          width={480}
+          height={270}
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <h3 className="text-xl sm:text-2xl font-bold text-[#1C1C1C] leading-snug mb-4">
@@ -247,7 +272,15 @@ const ExtraLesson = () => (
 const BonusCard = ({ img, bonusNum, title, price }: { img: string, bonusNum: string, title: string, price: string }) => (
   <div className="bg-white p-6 rounded-3xl shadow-2xl border border-[#F0EAD6] flex flex-col items-center text-center">
     <div className="w-full mb-5 relative">
-      <img src={img} alt={title} className="w-full h-auto rounded-2xl shadow-sm" />
+      <img 
+        src={img} 
+        alt={title} 
+        className="w-full h-auto rounded-2xl shadow-sm"
+        width={400}
+        height={260}
+        loading="lazy"
+        decoding="async"
+      />
     </div>
     <h3 className="font-bold text-lg text-[#1C1C1C] leading-tight mb-4">
       <span className="text-[#B45309] block mb-2 uppercase text-xs tracking-[0.2em] font-bold">{bonusNum}</span>
@@ -413,6 +446,10 @@ const Expert = () => (
           src="https://i.ibb.co/Df8Nw2qJ/EXPERT.webp" 
           alt="Laura Freitas" 
           className="w-full h-auto object-cover" 
+          width={320}
+          height={320}
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <h2 className="text-2xl font-bold text-[#2F7D32] mb-1">
@@ -442,6 +479,10 @@ const Guarantee = () => (
           src="https://i.ibb.co/pv6zQcGj/Garantia.webp" 
           alt="Garantia Incondicional de 7 Dias" 
           className="w-full h-auto object-contain mx-auto"
+          width={192}
+          height={192}
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <h2 className="text-2xl sm:text-3xl font-bold text-[#2F7D32] mb-4">
@@ -488,7 +529,15 @@ const Testimonials = () => {
         >
           {images.map((img, idx) => (
             <div key={idx} className="shrink-0 w-[96%] snap-center rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border border-[#6BCB77]/15 shake-hint">
-              <img src={img} alt={`Depoimento ${idx+1}`} className="w-full h-auto object-contain max-h-[850px]" />
+              <img 
+                src={img} 
+                alt={`Depoimento ${idx+1}`} 
+                className="w-full h-auto object-contain max-h-[850px]" 
+                width={500}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>
