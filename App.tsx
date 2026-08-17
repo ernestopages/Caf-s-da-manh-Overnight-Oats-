@@ -11,7 +11,7 @@ import {
 
 // --- Utility Components ---
 
-const CHECKOUT_URL = "#"; // Link do checkout (preparado para receber a URL)
+const CHECKOUT_URL = "https://pay.wiapy.com/6a8394454d1fc56194e2f2f9";
 
 const Button = ({ children, onClick, className = "", href }: React.PropsWithChildren<{ onClick?: () => void, className?: string, href?: string }>) => {
   const baseClasses = `w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center btn-pulse ${className}`;
