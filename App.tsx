@@ -11,6 +11,8 @@ import {
 
 // --- Utility Components ---
 
+const CHECKOUT_URL = "#"; // Link do checkout (preparado para receber a URL)
+
 const Button = ({ children, onClick, className = "", href }: React.PropsWithChildren<{ onClick?: () => void, className?: string, href?: string }>) => {
   const baseClasses = `w-full py-4 px-4 rounded-xl font-bold text-[15px] sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95 bg-[#2F7D32] text-white hover:brightness-110 whitespace-nowrap flex items-center justify-center btn-pulse ${className}`;
   
@@ -76,78 +78,62 @@ const TopBanner = () => {
 };
 
 const Hero = () => {
-  const scrollToOffer = () => {
-    document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <Section className="text-center pt-8 bg-[#F6F3ED]">
-      <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-[#2F7D32]">
-        Aprenda a Fazer <Highlight>+30 Cafés da Manhã no Pote</Highlight> que <Highlight>Saciam</Highlight> de Verdade, São Deliciosos e Baixos em <Highlight>Calorias</Highlight>… Prepare Tudo em Apenas <Highlight>30 Minutos</Highlight> e Tenha Café da Manhã Pronto por <Highlight>7 Dias</Highlight>
+    <Section className="text-center pt-8 pb-4 bg-[#F6F3ED]">
+      <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-3 text-[#2F7D32]">
+        CHEGA DE PREPARAR <Highlight>CAFÉ DA MANHÃ</Highlight> TODOS OS DIAS
       </h1>
-      <p className="text-sm md:text-base text-[#4A4A4A] mb-10 font-normal leading-relaxed max-w-lg mx-auto">
-        Esses são os Overnight Oats, gostosos, baratos, rápidos e sem fogo… Tenha café da manhã que parece sobremesa sempre pronto na geladeira.
+      <p className="text-sm md:text-base text-[#4A4A4A] mb-6 font-normal leading-relaxed max-w-lg mx-auto">
+        <strong className="font-bold text-[#1C1C1C]">Descubra</strong> a paz de ter <strong className="font-bold text-[#1C1C1C]">café da manhã</strong> pronto e fique longe do <strong className="font-bold text-[#1C1C1C]">fogão</strong> por <strong className="font-bold text-[#1C1C1C]">7 dias</strong>
       </p>
-      <div className="mb-10 rounded-2xl overflow-hidden shadow-2xl scale-105 transform origin-center border-2 border-[#2F7D32]">
+      <div className="max-w-md mx-auto">
         <img 
-          src="https://i.ibb.co/SDmQ5nnp/CAPA.webp" 
+          src="https://i.ibb.co/Pz5QLnvR/CAPA-ATT-png.png" 
           alt="Capa do E-book Overnight Oats" 
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-contain mx-auto"
           loading="eager"
         />
       </div>
-      <div className="bg-white p-4 rounded-2xl shadow-md border border-[#F0EAD6] mb-8 max-w-[280px] mx-auto">
-        <p className="text-[#7A7A7A] line-through text-xs mb-0.5">De R$99,90</p>
-        <p className="text-[10px] font-bold text-[#2F7D32] uppercase tracking-wider">por apenas</p>
-        <p className="text-4xl font-bold text-[#2F7D32] my-1">R$10,00</p>
-        <p className="text-[11px] text-[#4A4A4A] italic leading-tight">
-          Apenas um valor simbólico para separar quem realmente quer aprender a fazer cafés da manhã no pote dos curiosos.
-        </p>
-      </div>
-      <Button onClick={scrollToOffer} className="shadow-[#2F7D32]/30">
-        QUERO FAZER CAFÉS GOSTOSOS
-      </Button>
     </Section>
   );
 };
 
 const WhatYouFind = () => {
   const items = [
-    { text: "Funciona com qualquer pote", icon: "🫙" },
     { text: "+30 opções deliciosas", icon: "🍓" },
     { text: "Opções sem Lactose", icon: "🥛" },
     { text: "Sem cozinhar nada", icon: "🥄" },
     { text: "O segredo das camadas", icon: "🥞" },
+    { text: "Onde encontrar e comprar os potes que eu uso", icon: "🫙" },
     { text: "Conservação de 7 dias", icon: "📅" },
     { text: "Prontos em 30 minutos", icon: "⏱️" },
     { text: "Passo a passo de preparo", icon: "📋" },
   ];
 
   return (
-    <Section className="bg-[#FFFFFF]" id="find">
-      <h2 className="text-3xl font-bold text-center mb-10 text-[#2F7D32] uppercase tracking-wide">
-        O QUE VOCÊ<br/><span className="text-[#B45309]">VAI ENCONTRAR</span>
-      </h2>
-      <div className="flex flex-col gap-1 mb-12 max-w-sm mx-auto pl-2">
-        {items.map((item, idx) => (
-          <div key={idx} className="flex items-center gap-2 py-0.5">
-            <span className="text-2xl shrink-0 w-8 text-center">{item.icon}</span>
-            <span className="font-bold text-[#2F7D32] text-lg leading-tight">
-              {item.text}
-            </span>
-          </div>
-        ))}
+    <Section className="bg-[#F6F3ED] pt-2 pb-10" id="find">
+      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-[#F0EAD6]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#2F7D32] uppercase tracking-wide">
+          O QUE VOCÊ<br/><span className="text-[#B45309]">VAI ENCONTRAR</span>
+        </h2>
+        <div className="flex flex-col gap-1.5 mb-8 max-w-sm mx-auto pl-2">
+          {items.map((item, idx) => (
+            <div key={idx} className="flex items-center gap-3 py-1">
+              <span className="text-2xl shrink-0 w-8 text-center">{item.icon}</span>
+              <span className="font-bold text-[#2F7D32] text-base sm:text-lg leading-tight">
+                {item.text}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-[#F0EAD6]">
+          <img 
+            src="https://i.ibb.co/fzg6zGpv/Gemini-Generated-Image-3ib6u03ib6u03ib6.webp" 
+            alt="Montagem dos potes" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </div>
-      <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
-        <img 
-          src="https://i.ibb.co/Fq7jvTmy/MONTAGEM.webp" 
-          alt="Montagem dos potes" 
-          className="w-full h-auto"
-        />
-      </div>
-      <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
-        QUERO AS RECEITAS
-      </Button>
     </Section>
   );
 };
@@ -199,42 +185,61 @@ const Recipes = () => (
         img="https://i.ibb.co/yFm0NqF8/Banana.webp"
       />
     </div>
-    <p className="text-center text-sm md:text-base mb-8 font-bold italic text-[#4A4A4A] px-4">
+    <p className="text-center text-sm md:text-base font-bold italic text-[#4A4A4A] px-4">
       E muito mais… receitas saborosas e práticas que transformarão sua manhã de forma saudável sem precisar levar nada ao fogo.
     </p>
-    <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
-      QUERO AS RECEITAS
-    </Button>
   </Section>
 );
 
 const Benefits = () => (
-  <Section className="bg-[#FFFFFF]">
-    <h2 className="text-2xl font-bold text-center mb-8 uppercase tracking-wide text-[#2F7D32]">
-      DURA ATÉ <Highlight>07 DIAS</Highlight> NA <Highlight>GELADEIRA</Highlight> SEM PERDER A QUALIDADE E SABOR!
-    </h2>
-    <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
-      <img 
-        src="https://i.ibb.co/Tqd8stFF/DIAS-2.webp" 
-        alt="Dias na geladeira" 
-        className="w-full h-auto"
-      />
+  <Section className="bg-[#F6F3ED] pt-2 pb-10">
+    <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-[#F0EAD6]">
+      <h2 className="text-xl sm:text-2xl font-bold text-center mb-8 uppercase tracking-wide text-[#2F7D32]">
+        DURA ATÉ <Highlight>07 DIAS</Highlight> NA <Highlight>GELADEIRA</Highlight> SEM PERDER A QUALIDADE E SABOR!
+      </h2>
+      <div className="mb-8 rounded-2xl overflow-hidden shadow-lg border border-[#F0EAD6]">
+        <img 
+          src="https://i.ibb.co/Tqd8stFF/DIAS-2.webp" 
+          alt="Dias na geladeira" 
+          className="w-full h-auto"
+        />
+      </div>
+      <div className="space-y-2.5 max-w-sm mx-auto pl-2">
+        {[
+          "Sacia por muito tempo",
+          "Pronto em poucos minutos",
+          "Dura 07 dias na geladeira",
+          "Promove o Emagrecimento rápido",
+          "Elimina a vontade de doce",
+          "Café saudável sem parecer dieta chata",
+          "Várias opções de sabores"
+        ].map((item, idx) => (
+          <div key={idx} className="flex items-center gap-3 py-0.5">
+            <CheckCircle2 size={20} className="text-[#2F7D32] shrink-0" />
+            <p className="text-base sm:text-lg font-bold text-[#4A4A4A] leading-tight">{item}</p>
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="space-y-2 mb-6 max-sm mx-auto pl-4">
-      {[
-        "Sacia por muito tempo",
-        "Pronto em poucos minutos",
-        "Dura 07 dias na geladeira",
-        "Promove o Emagrecimento rápido",
-        "Elimina a vontade de doce",
-        "Café saudável sem parecer dieta chata",
-        "Várias opções de sabores"
-      ].map((item, idx) => (
-        <div key={idx} className="flex items-center gap-3 py-0.5">
-          <CheckCircle2 size={20} className="text-[#2F7D32] shrink-0" />
-          <p className="text-base md:text-lg font-bold text-[#4A4A4A] leading-tight">{item}</p>
-        </div>
-      ))}
+  </Section>
+);
+
+const ExtraLesson = () => (
+  <Section className="bg-[#F6F3ED] pt-2 pb-10">
+    <div className="bg-[#FDFBF7] p-6 sm:p-8 rounded-3xl shadow-xl border border-[#F0EAD6] max-w-lg mx-auto text-center">
+      <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
+        <img 
+          src="https://i.ibb.co/Q32xyg60/AULA-WEBP.webp" 
+          alt="Aula Introdutória de Brinde" 
+          className="w-full h-auto object-cover"
+        />
+      </div>
+      <h3 className="text-xl sm:text-2xl font-bold text-[#1C1C1C] leading-snug mb-4">
+        Além de adquirir o guia, você ganha <span className="text-[#B45309]">acesso a UMA aula introdutória totalmente de graça!</span>
+      </h3>
+      <p className="text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
+        Onde eu te explico do zero e te ensino passo a passo como você irá fazer todos os seus <strong className="font-bold text-[#2F7D32]">cafés da manhã no pote!</strong>
+      </p>
     </div>
   </Section>
 );
@@ -260,7 +265,7 @@ const Bonus = () => (
     <h2 className="text-3xl font-bold text-center mb-10 text-[#2F7D32] leading-tight">
       Você Ainda Irá Receber <br/><Highlight>+3 Bônus Exclusivos</Highlight>:
     </h2>
-    <div className="space-y-10 mb-12">
+    <div className="space-y-10">
       <BonusCard 
         img="https://i.ibb.co/B2YPt2J1/B-nus-1.webp"
         bonusNum="Bônus 01"
@@ -280,9 +285,6 @@ const Bonus = () => (
         price="R$ 29,90"
       />
     </div>
-    <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
-      QUERO AGORA MESMO!
-    </Button>
   </Section>
 );
 
@@ -379,11 +381,11 @@ const OfferBlock = () => {
         <div className="text-center mb-10">
           <p className="text-[#7A7A7A] line-through text-xl mb-1">De R$99,90</p>
           <p className="text-sm font-bold text-[#B45309] uppercase tracking-widest mb-2">POR APENAS</p>
-          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$10,00</p>
+          <p className="text-7xl font-bold text-[#34A853] tracking-tighter">R$27,00</p>
         </div>
 
         <div className="w-full mb-8 max-w-md mx-auto">
-          <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="py-5 shadow-[#2F7D32]/40">
+          <Button href={CHECKOUT_URL} className="py-5 shadow-[#2F7D32]/40">
             QUERO COMPRAR AGORA
           </Button>
         </div>
@@ -424,6 +426,11 @@ const Expert = () => (
       <p>Não foi força de vontade que resolveu. Foi organização.</p>
       <p>Quando comecei a deixar meus cafés prontos em potes, parei de pular refeições, parei de comer besteira por falta de tempo e finalmente consegui manter constância sem sofrimento. E o melhor: são tão gostosos que parecem sobremesa, mas trabalham a favor do meu corpo e dos meus objetivos.</p>
     </div>
+    <div className="mt-10 max-w-md mx-auto">
+      <Button href={CHECKOUT_URL} className="py-5 shadow-[#2F7D32]/40">
+        QUERO COMPRAR AGORA
+      </Button>
+    </div>
   </Section>
 );
 
@@ -449,8 +456,8 @@ const Testimonials = () => {
   };
 
   return (
-    <Section className="bg-[#FFFFFF] overflow-hidden">
-      <h2 className="text-2xl font-bold text-center mb-10 text-[#2F7D32] leading-snug">
+    <Section className="bg-[#F6F3ED] overflow-hidden pt-2 pb-10">
+      <h2 className="text-2xl font-bold text-center mb-8 text-[#2F7D32] leading-snug">
         Eu <Highlight>recebo</Highlight> mensagens como essas todo dia, e logo será <Highlight>você</Highlight> me enviando mensagens assim <Highlight>também</Highlight>!
       </h2>
       
@@ -478,12 +485,6 @@ const Testimonials = () => {
         >
           <ChevronRight size={32} />
         </button>
-      </div>
-
-      <div className="mt-12">
-        <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })} className="shadow-[#2F7D32]/30">
-          QUERO COMPRAR AGORA
-        </Button>
       </div>
     </Section>
   );
@@ -546,6 +547,11 @@ const FAQ = () => (
         a="Não precisa de nada disso. Você só precisa de potes, colheres, uma faca e uma tábua de corte."
       />
     </div>
+    <div className="mt-12 max-w-md mx-auto">
+      <Button href={CHECKOUT_URL} className="py-5 shadow-[#2F7D32]/40">
+        QUERO COMPRAR AGORA
+      </Button>
+    </div>
   </Section>
 );
 
@@ -570,13 +576,14 @@ export default function App() {
       <TopBanner />
       <Hero />
       <WhatYouFind />
+      <Testimonials />
       <Recipes />
       <Benefits />
+      <ExtraLesson />
       <Bonus />
       <PainPoints />
       <OfferBlock />
       <Expert />
-      <Testimonials />
       <FAQ />
       <Footer />
     </div>
