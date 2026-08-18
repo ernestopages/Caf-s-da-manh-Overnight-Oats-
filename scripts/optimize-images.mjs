@@ -16,6 +16,7 @@ const images = [
   { name: 'bonus-1.webp', url: 'https://i.ibb.co/B2YPt2J1/B-nus-1.webp', maxWidth: 640, quality: 70 },
   { name: 'bonus-2.webp', url: 'https://i.ibb.co/5g2gC5bM/B-nus-2.webp', maxWidth: 640, quality: 70 },
   { name: 'bonus-3.webp', url: 'https://i.ibb.co/JR1KkKFN/B-nus-3.webp', maxWidth: 640, quality: 70 },
+  { name: 'mockup-oferta.webp', url: 'https://i.ibb.co/27HPPVZB/7.webp', maxWidth: 640, quality: 70 },
   { name: 'expert.webp', url: 'https://i.ibb.co/Df8Nw2qJ/EXPERT.webp', maxWidth: 640, quality: 70 },
   { name: 'garantia.webp', url: 'https://i.ibb.co/pv6zQcGj/Garantia.webp', maxWidth: 400, quality: 70 },
   { name: 'dep-1.webp', url: 'https://i.ibb.co/gbX0sd3v/Dep-1.webp', maxWidth: 720, quality: 70 },
@@ -35,6 +36,10 @@ async function run() {
 
   for (const img of images) {
     try {
+      const outPath = path.join(outDir, img.name);
+      if (fs.existsSync(outPath) && fs.statSync(outPath).size > 1000) {
+        continue;
+      }
       const resp = await fetch(img.url);
       if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${img.url}`);
       const arrayBuffer = await resp.arrayBuffer();
@@ -59,7 +64,6 @@ async function run() {
       totalAfter += sizeAfter;
 
       const outMeta = await sharp(outBuffer).metadata();
-      const outPath = path.join(outDir, img.name);
       fs.writeFileSync(outPath, outBuffer);
 
       results.push({

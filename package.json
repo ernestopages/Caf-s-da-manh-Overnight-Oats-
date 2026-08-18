@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/optimize-images.mjs",
     "build": "vite build",
     "lint": "tsc --noEmit",
+    "optimize:images": "node scripts/optimize-images.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,13 +16,13 @@
     "lucide-react": "0.475.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@types/sharp": "^0.32.0",
     "@vitejs/plugin-react": "^5.0.0",
-    "sharp": "^0.35.3",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
