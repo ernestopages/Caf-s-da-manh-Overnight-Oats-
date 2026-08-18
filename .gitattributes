@@ -1,0 +1,12 @@
+# Force binary treatment for media files to prevent any CRLF/LF line-ending or encoding corruption
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.avif binary
+*.mp4 binary
+*.webm binary
+*.woff binary
+*.woff2 binary
