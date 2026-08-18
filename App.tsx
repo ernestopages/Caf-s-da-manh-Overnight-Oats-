@@ -88,7 +88,7 @@ const Hero = () => {
       </p>
       <div className="max-w-md mx-auto">
         <img 
-          src="https://i.ibb.co/wN90tkw0/CAPA-web.webp" 
+          src="/images/capa.webp" 
           alt="Capa do E-book Overnight Oats" 
           className="w-full h-auto object-contain mx-auto"
           width={800}
@@ -133,7 +133,7 @@ const WhatYouFind = () => {
         </div>
         <div className="rounded-2xl overflow-hidden shadow-lg border border-[#F0EAD6]">
           <img 
-            src="https://i.ibb.co/fzg6zGpv/Gemini-Generated-Image-3ib6u03ib6u03ib6.webp" 
+            src="/images/montagem-potes.webp" 
             alt="Montagem dos potes" 
             className="w-full h-auto object-cover"
             width={760}
@@ -174,32 +174,32 @@ const Recipes = () => (
       <RecipeCard 
         title="⚡ Energético Natural"
         desc="(Perfeito pra começar o dia com disposição, saciedade e sem aquela fome que aparece antes do almoço.)"
-        img="https://i.ibb.co/4ZPZScBJ/Energ-tico.webp"
+        img="/images/energetico.webp"
       />
       <RecipeCard 
         title="🥭 Tropical Cremoso"
         desc="(Leve, refrescante e naturalmente doce, parece sobremesa, mas ajuda você a manter o foco na sua rotina saudável.)"
-        img="https://i.ibb.co/G4DH980p/Tropical.webp"
+        img="/images/tropical.webp"
       />
       <RecipeCard 
         title="🍎 Maçã & Canela Termogênico"
         desc="(Aquele sabor aconchegante que controla a vontade de doce e mantém você satisfeita por hours.)"
-        img="https://i.ibb.co/Y43W1KNw/MA-COM-CANELA.png"
+        img="/images/maca-canela.webp"
       />
       <RecipeCard 
         title="🍎 Morango Proteico"
         desc="(Delicado, leve e ideal pra quem quer algo gostoso que ajuda na saciedade e no emagrecimento.)"
-        img="https://i.ibb.co/DHdwzSZY/Morango-Proteico.png"
+        img="/images/morango-proteico.webp"
       />
       <RecipeCard 
         title="☕ Café & Cacau Despertar"
         desc="(Combinação perfeita pra acordar de verdade e manter energia estável durante o dia.)"
-        img="https://i.ibb.co/zWDQb9Jk/Caf.webp"
+        img="/images/cafe.webp"
       />
       <RecipeCard 
         title="🍌 Banana com Linhaça Cremosa"
         desc="(Simples, nutritiva e perfeita pra quem quer praticidade sem abrir mão do resultado.)"
-        img="https://i.ibb.co/yFm0NqF8/Banana.webp"
+        img="/images/banana.webp"
       />
     </div>
     <p className="text-center text-sm md:text-base font-bold italic text-[#4A4A4A] px-4">
@@ -216,7 +216,7 @@ const Benefits = () => (
       </h2>
       <div className="mb-8 rounded-2xl overflow-hidden shadow-lg border border-[#F0EAD6]">
         <img 
-          src="https://i.ibb.co/Tqd8stFF/DIAS-2.webp" 
+          src="/images/dias-geladeira.webp" 
           alt="Dias na geladeira" 
           className="w-full h-auto"
           width={760}
@@ -250,7 +250,7 @@ const ExtraLesson = () => (
     <div className="bg-[#FDFBF7] p-6 sm:p-8 rounded-3xl shadow-xl border border-[#F0EAD6] max-w-lg mx-auto text-center">
       <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
         <img 
-          src="https://i.ibb.co/Q32xyg60/AULA-WEBP.webp" 
+          src="/images/aula-extra.webp" 
           alt="Aula Introdutória de Brinde" 
           className="w-full h-auto object-cover"
           width={760}
@@ -300,19 +300,19 @@ const Bonus = () => (
     </h2>
     <div className="space-y-10">
       <BonusCard 
-        img="https://i.ibb.co/B2YPt2J1/B-nus-1.webp"
+        img="/images/bonus-1.webp"
         bonusNum="Bônus 01"
         title='"Lista de Compras Econômica + Substituições baratas"'
         price="R$ 29,90"
       />
       <BonusCard 
-        img="https://i.ibb.co/5g2gC5bM/B-nus-2.webp"
+        img="/images/bonus-2.webp"
         bonusNum="Bônus 02"
         title='"Sobremesas Fit no Pote (zero açúcar)"'
         price="R$ 29,90"
       />
       <BonusCard 
-        img="https://i.ibb.co/JR1KkKFN/B-nus-3.webp"
+        img="/images/bonus-3.webp"
         bonusNum="Bônus 03"
         title='"30 Marmitas Fit p/congelar"'
         price="R$ 29,90"
@@ -390,7 +390,7 @@ const OfferBlock = () => {
       <div className="bg-[#FDFBF7] rounded-[40px] p-8 md:p-12 shadow-[0_20px_60px_rgba(47,125,50,0.12)] border border-[#2F7D32]/10 relative overflow-hidden flex flex-col items-center">
         <div className="mb-12 scale-125 md:scale-150 transform transition-transform duration-700 hover:scale-[1.55]">
           <img 
-            src="https://i.ibb.co/27HPPVZB/7.webp" 
+            src="/images/mockup-oferta.webp" 
             alt="Mockup do Guia" 
             className="w-full h-auto drop-shadow-2xl" 
             width={640}
@@ -451,7 +451,7 @@ const Expert = () => (
     <div className="text-center mb-8">
       <div className="max-w-[320px] mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-6">
         <img 
-          src="https://i.ibb.co/Df8Nw2qJ/EXPERT.webp" 
+          src="/images/expert.webp" 
           alt="Laura Freitas" 
           className="w-full h-auto object-cover" 
           width={640}
@@ -484,9 +484,9 @@ const Guarantee = () => (
     <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-[#F0EAD6] max-w-lg mx-auto text-center">
       <div className="w-40 sm:w-48 mx-auto mb-6">
         <img 
-          src="https://i.ibb.co/pv6zQcGj/Garantia.webp" 
+          src="/images/garantia.webp" 
           alt="Garantia Incondicional de 7 Dias" 
-          className="w-full h-auto object-contain mx-auto"
+          className="w-full h-auto object-contain mx-auto" 
           width={260}
           height={231}
           loading="lazy"
@@ -506,11 +506,11 @@ const Guarantee = () => (
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const images = [
-    "https://i.ibb.co/gbX0sd3v/Dep-1.webp",
-    "https://i.ibb.co/TM1rnzZp/Dep-2.webp",
-    "https://i.ibb.co/1GXZnFrd/Dep-3.webp",
-    "https://i.ibb.co/HpH6VyPV/Dep-4.webp",
-    "https://i.ibb.co/TDBMnxBh/Dep-5.webp"
+    "/images/dep-1.webp",
+    "/images/dep-2.webp",
+    "/images/dep-3.webp",
+    "/images/dep-4.webp",
+    "/images/dep-5.webp"
   ];
 
   const scroll = (dir: 'left' | 'right') => {

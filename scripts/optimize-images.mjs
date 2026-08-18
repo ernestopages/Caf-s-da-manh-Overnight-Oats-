@@ -37,9 +37,6 @@ async function run() {
   for (const img of images) {
     try {
       const outPath = path.join(outDir, img.name);
-      if (fs.existsSync(outPath) && fs.statSync(outPath).size > 1000) {
-        continue;
-      }
       const resp = await fetch(img.url);
       if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${img.url}`);
       const arrayBuffer = await resp.arrayBuffer();
