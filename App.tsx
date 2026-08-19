@@ -88,7 +88,7 @@ const Hero = () => {
       </p>
       <div className="max-w-md mx-auto">
         <img 
-          src="https://i.ibb.co/wN90tkw0/CAPA-web.webp" 
+          src="https://i.ibb.co/0y1VWrfr/CAPA.webp" 
           alt="Capa do E-book Overnight Oats" 
           className="w-full h-auto object-contain mx-auto"
           width={448}
@@ -133,7 +133,7 @@ const WhatYouFind = () => {
         </div>
         <div className="rounded-2xl overflow-hidden shadow-lg border border-[#F0EAD6]">
           <img 
-            src="https://i.ibb.co/fzg6zGpv/Gemini-Generated-Image-3ib6u03ib6u03ib6.webp" 
+            src="https://i.ibb.co/3ySr7f60/EXPERT.webp" 
             alt="Montagem dos potes" 
             className="w-full h-auto object-cover"
             width={600}
@@ -250,7 +250,7 @@ const ExtraLesson = () => (
     <div className="bg-[#FDFBF7] p-6 sm:p-8 rounded-3xl shadow-xl border border-[#F0EAD6] max-w-lg mx-auto text-center">
       <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
         <img 
-          src="https://i.ibb.co/Q32xyg60/AULA-WEBP.webp" 
+          src="https://i.ibb.co/r9YLC4c/AULA.webp" 
           alt="Aula Introdutória de Brinde" 
           className="w-full h-auto object-cover"
           width={480}
